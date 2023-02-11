@@ -19,11 +19,11 @@ describe("deterministicPartitionKey", () => {
     expect(deterministicPartitionKey({ partitionKey: [4, 2]})).toBe("[4,2]");
   });
 
-  it("Returns the partition key when it's set and its length < MAX_PARTITION_KEY_LENGTH", () => {
+  it("Returns the partition key when partition key is set and its length < MAX_PARTITION_KEY_LENGTH", () => {
     expect(deterministicPartitionKey({ partitionKey: "value" })).toBe("value");
   })
 
-  it("Returns the deterministic partition key when it's set and its length > MAX_PARTITION_KEY_LENGTH", () => {
+  it("Returns the deterministic partition key when partition key is set and its length > MAX_PARTITION_KEY_LENGTH", () => {
     const expectedKey = crypto.createHash("sha3-512").update("0".repeat(257)).digest("hex");
     expect(deterministicPartitionKey({ partitionKey: "0".repeat(257) })).toBe(expectedKey);
   });
