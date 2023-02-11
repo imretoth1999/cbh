@@ -20,9 +20,9 @@ We will have 2 types of tickets
 
 Story: A ticket which requires code change
 
-Task: A ticket which requires no code 
+Task: A ticket which requires no code change
 
-Every task will have the format CBH-XXXX where X is a 
+Every task will have the format CBH-XXXX where X is a number
 
 I call Implementation details Dev notes since they will contain details related to both implementation and testing the feature
 
@@ -113,7 +113,7 @@ The project's documentation should be updated to reflect the changes made in Tic
 
 **Estimate**: 
 
-1 story 
+1 story point
 
 **Dev notes**:
 
