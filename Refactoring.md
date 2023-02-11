@@ -28,7 +28,7 @@ The variable data was redundant and I moved the JSON.stringify inside the update
   }
 
 ```
-The following code was into one single if. There is no verify if the candidate variable is not null since if it is null, it won't pass the typeof condition. Since we verify that the candidate exists, the worst case scenario being that we give it the value TRIVIAL_PARTITION_KEY, I moved the TRIVIAL_PARTITION_KEY as the initial value.
+The following code was into one single if. There is no need to verify if the candidate variable is not null since if it is null, it won't pass the typeof condition. Since we verify that the candidate exists, the worst case scenario being that we give it the value TRIVIAL_PARTITION_KEY, I moved the TRIVIAL_PARTITION_KEY as the initial value.
 
 ```js
 if (candidate) {
